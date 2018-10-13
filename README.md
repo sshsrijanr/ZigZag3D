@@ -36,5 +36,34 @@ Set the Static and Dynamic Friction in Inspector of that element as Zero
 Now For the Camera to Follow the Ball At the click on the GameObject MainCamera and at Inspector add component Script `cameraFollow.cs`
 #### Copy the code from the above cameraFollow C# script in Repo and Add to this file
 ## **Step 4:**
-Now Add
-<img src="img.png"></img>
+Now as the platform is a gameobject we want to create multiple instances of platform at once for that what we can do is first duplicate the GameObject platform<br>
+Now we have to change its position and scale as
+```
+position
+x=4 y=0 z=6
+scale
+x=2 y=1 z=2
+```
+Now click on the GameObject of this Platform and add an empty Gameobject in it. 
+Now we have to change this object's position and scale as
+```
+position
+x=4 y=1 z=6
+scale
+x=2 y=1 z=2
+```
+This will be Our TriggerChecker
+<img src="rq/img.png"></img>
+## Step 5:
+Now on to our second platform of 2x1x2 add component `Physics-Rigidbody`<br>
+And on the add Component newScript to our triggerChecker name it as `triggerChecker.cs`
+#### Copy the code from the above triggerchecker C# script in Repo and Add to this file
+Now Create a New Folder in Assets and name it as Prefabs<br>
+Now Drag and drop the platform of 2x1x2 in this folder
+<br><img src="rq/img2.png"></img>
+## Step 6:
+Now Create another Empty GameObject and name it as platformSpawnner and component to it a NewScript
+Name this script as `platformspawnner.cs`<br>
+#### Copy the code from the above platformspawnner C# script in Repo and Add to this file
+
+Now Check Every GameObject Inspector if the scripts require any GameObject fill it with the optimum one.
